@@ -262,7 +262,7 @@ async function loadPage() {
 
     try {
         // Read the product list from the text file
-        for (let i = 0; i < 5; i++) {
+       
   
         const response = await fetch("productsPath.txt");
 
@@ -299,7 +299,7 @@ async function loadPage() {
             li.appendChild(a);
             tickerTrack.appendChild(li);
         });
-        }
+        
         
 
     } catch (error) {
