@@ -262,10 +262,10 @@ async function loadPage() {
 
     try {
         // Read the product list from the text file
-        const response = await fetch("products.txt");
+        const response = await fetch("productsPath.txt");
 
         if (!response.ok) {
-            throw new Error("Could not load products.txt");
+            throw new Error("Could not load productsPath.txt");
         }
 
         const text = await response.text();
