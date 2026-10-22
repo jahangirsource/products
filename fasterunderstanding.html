@@ -375,5 +375,59 @@ build();
 var t;window.addEventListener("resize",function(){clearTimeout(t);t=setTimeout(build,200)});
 })();
 </script>
+   <script> 
+async function loadPage() {
+    const tickerTrack = document.getElementById("tickerTrack");
+
+    try {
+        // Read the product list from the text file
+       
+  
+        const response = await fetch("productsPath.txt");
+
+        if (!response.ok) {
+            throw new Error("Could not load productsPath.txt");
+        }
+
+        const text = await response.text();
+
+       
+        // Create the UL > LI > A > IMG structure
+        const lines = text.split(/\r?\n/);
+
+        lines.forEach(line => {
+            if (!line.trim()) return;
+
+            const [href, src, alt] = line.split("|").map(x => x.trim());
+
+            if (!href || !src) return;
+
+            const li = document.createElement("li");
+            const a = document.createElement("a");
+            const img = document.createElement("img");
+
+            a.href = href;
+            a.target = "_blank";
+            a.rel = "noopener";
+
+            img.src = src;
+            img.alt = alt || "";
+            img.decoding = "async";
+
+            a.appendChild(img);
+            li.appendChild(a);
+            tickerTrack.appendChild(li);
+        });
+        
+        
+
+    } catch (error) {
+        console.error("Ticker loading error:", error);
+    }
+}
+
+document.addEventListener("DOMContentLoaded", loadPage);
+
+</script> 
 </body>
 </html>
