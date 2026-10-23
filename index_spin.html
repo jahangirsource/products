@@ -24,9 +24,24 @@
 {"@type":"Question","name":"What ages is it for?","acceptedAnswer":{"@type":"Answer","text":"Ages 4 to 10. Bold outlines suit younger children, and scenes have detail for older kids."}},
 {"@type":"Question","name":"Do I need special supplies?","acceptedAnswer":{"@type":"Answer","text":"No. Crayons, colored pencils or washable markers all work on standard printer paper."}}]}
 </script>
+ <script>
+    window.addEventListener("load", () => {
+    const loader = document.getElementById("loading-overlay");
+
+    loader.classList.add("hide");
+
+    setTimeout(() => {
+        loader.remove();
+    }, 500); // match CSS transition duration
+});
+</script>
 
 </head>
 <body>
+<div id="loading-overlay">
+    <div class="spinner"></div>
+</div>
+     
 <!-- ===== PRODUCT TICKER =====
      HOW TO ADD A NEW PRODUCT: copy one <li>...</li> line below, paste it at the end of the list,
      then change the Gumroad link (href), the image file name (src) and the product name (alt).
