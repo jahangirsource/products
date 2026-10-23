@@ -165,31 +165,31 @@ document.getElementById("yr").textContent=new Date().getFullYear();
 </script>
 
 <script>
-/* Product ticker: clones the <li> items so the slide loops seamlessly. You never need to edit this. */
 (function(){
+var pl=document.getElementById("player");
+pl.querySelector("button").addEventListener("click",function(){
+var f=document.createElement("iframe");f.src="https://www.youtube-nocookie.com/embed/15d28rFL3uc?autoplay=1&rel=0";
+f.title="Inspiration To Education video";f.allow="autoplay; encrypted-media; picture-in-picture";f.allowFullscreen=true;
+pl.innerHTML="";pl.appendChild(f)});
+document.getElementById("yr").textContent=new Date().getFullYear();
 var box=document.getElementById("ticker"),ul=document.getElementById("tickerTrack");
-if(!box||!ul)return;
 var originals=[].slice.call(ul.children);
-if(!originals.length)return;
-/* people who prefer less motion get a plain, manually scrollable row */
 if(window.matchMedia&&window.matchMedia("(prefers-reduced-motion: reduce)").matches)return;
-var SPEED=60; /* pixels per second: raise for faster, lower for slower */
+var SPEED=60;
 function build(){
 [].slice.call(ul.querySelectorAll("[data-clone]")).forEach(function(n){ul.removeChild(n)});
 var setW=ul.offsetWidth;if(!setW)return;
 var n=Math.max(1,Math.ceil(box.clientWidth/setW));
-for(var r=0;r<n*2-1;r++){
-originals.forEach(function(li){
+for(var r=0;r<n*2-1;r++){originals.forEach(function(li){
 var c=li.cloneNode(true);c.setAttribute("data-clone","");c.setAttribute("aria-hidden","true");
-[].forEach.call(c.querySelectorAll("a"),function(a){a.tabIndex=-1});
-ul.appendChild(c)})}
-box.style.setProperty("--dur",(n*setW/SPEED)+"s");
-box.classList.add("is-live")}
+[].forEach.call(c.querySelectorAll("a"),function(a){a.tabIndex=-1});ul.appendChild(c)})}
+box.style.setProperty("--dur",(n*setW/SPEED)+"s");box.classList.add("is-live")}
 build();
 var t;window.addEventListener("resize",function(){clearTimeout(t);t=setTimeout(build,200)});
 })();
 </script>
-  <script> 
+
+<script> 
 async function loadPage() {
     const tickerTrack = document.getElementById("tickerTrack");
 
@@ -233,19 +233,16 @@ async function loadPage() {
             tickerTrack.appendChild(li);
         });
         
-        
+        const link = document.createElement("link");
+        link.rel = "stylesheet";
+        link.href = "style.css";
+        document.head.appendChild(link);
 
     } catch (error) {
         console.error("Ticker loading error:", error);
     }
 
-      setTimeout(function () {
-        const link = document.createElement("link");
-        link.rel = "stylesheet";
-        link.href = "style.css";
-
-        document.head.appendChild(link);
-    }, 10);
+    
 }
 
 document.addEventListener("DOMContentLoaded", loadPage);
