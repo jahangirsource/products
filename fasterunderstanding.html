@@ -144,58 +144,31 @@
 <div class="sticky"><a class="btn" href="https://lucksource.gumroad.com/l/fasterunderstanding" rel="noopener">Download the coloring book</a></div>
 
 <script>
-/* Add a new product by adding one object here. Leave "url" empty for a "coming soon" card. */
-var PRODUCTS=[
-{title:"Cute Animal Jobs & Daily Life",tag:"Coloring book",desc:"Animals at work and at home. Kids color real-life jobs and understand the world.",url:"https://lucksource.gumroad.com/l/fasterunderstanding",img:"cuteamimalthumbnail.png",emoji:"🐾"},
-{title:"Helping Hands, Animal Lands",tag:"Coloring book",desc:"Kindness to people and wildlife, one colored page at a time.",url:"https://lucksource.gumroad.com/l/helpinghandsanimallands",img:"helpingHandThumnail.png",emoji:"🐾"},
-{title:"Next book coming soon",tag:"Coming soon",desc:"A new activity book for curious kids.",url:"",img:"",emoji:"✨"}
-];
 (function(){
-var box=document.getElementById("products");
-PRODUCTS.forEach(function(p){
-var a=document.createElement("article");a.className="prod"+(p.url?"":" soon");
-var media=p.img?'<img loading="lazy" alt=""/>':'<div class="ph" aria-hidden="true"></div>';
-a.innerHTML=media+'<div class="b"><span class="tag"></span><h3></h3><p></p><a class="btn"></a></div>';
-if(p.img)a.querySelector("img").src=p.img;else a.querySelector(".ph").textContent=p.emoji;
-a.querySelector("img")&&(a.querySelector("img").alt=p.title+" cover");
-a.querySelector(".tag").textContent=p.tag;a.querySelector("h3").textContent=p.title;a.querySelector("p").textContent=p.desc;
-var b=a.querySelector(".btn");b.textContent=p.url?"Get it now":"Coming soon";if(p.url){b.href=p.url;b.rel="noopener"}
-box.appendChild(a)});
 var pl=document.getElementById("player");
 pl.querySelector("button").addEventListener("click",function(){
 var f=document.createElement("iframe");f.src="https://www.youtube-nocookie.com/embed/fkWyGpwIERA?autoplay=1&rel=0";
-f.title="Cute Animal Jobs & Daily Life Coloring Book video";f.allow="autoplay; encrypted-media; picture-in-picture";f.allowFullscreen=true;
+f.title="Inspiration To Education video";f.allow="autoplay; encrypted-media; picture-in-picture";f.allowFullscreen=true;
 pl.innerHTML="";pl.appendChild(f)});
 document.getElementById("yr").textContent=new Date().getFullYear();
-})();
-</script>
-
-<script>
-/* Product ticker: clones the <li> items so the slide loops seamlessly. You never need to edit this. */
-(function(){
 var box=document.getElementById("ticker"),ul=document.getElementById("tickerTrack");
-if(!box||!ul)return;
 var originals=[].slice.call(ul.children);
-if(!originals.length)return;
-/* people who prefer less motion get a plain, manually scrollable row */
 if(window.matchMedia&&window.matchMedia("(prefers-reduced-motion: reduce)").matches)return;
-var SPEED=60; /* pixels per second: raise for faster, lower for slower */
+var SPEED=60;
 function build(){
 [].slice.call(ul.querySelectorAll("[data-clone]")).forEach(function(n){ul.removeChild(n)});
 var setW=ul.offsetWidth;if(!setW)return;
 var n=Math.max(1,Math.ceil(box.clientWidth/setW));
-for(var r=0;r<n*2-1;r++){
-originals.forEach(function(li){
+for(var r=0;r<n*2-1;r++){originals.forEach(function(li){
 var c=li.cloneNode(true);c.setAttribute("data-clone","");c.setAttribute("aria-hidden","true");
-[].forEach.call(c.querySelectorAll("a"),function(a){a.tabIndex=-1});
-ul.appendChild(c)})}
-box.style.setProperty("--dur",(n*setW/SPEED)+"s");
-box.classList.add("is-live")}
+[].forEach.call(c.querySelectorAll("a"),function(a){a.tabIndex=-1});ul.appendChild(c)})}
+box.style.setProperty("--dur",(n*setW/SPEED)+"s");box.classList.add("is-live")}
 build();
 var t;window.addEventListener("resize",function(){clearTimeout(t);t=setTimeout(build,200)});
 })();
 </script>
- <script> 
+
+<script> 
 async function loadPage() {
     const tickerTrack = document.getElementById("tickerTrack");
 
@@ -238,18 +211,17 @@ async function loadPage() {
             li.appendChild(a);
             tickerTrack.appendChild(li);
         });
-
+        
         const link = document.createElement("link");
         link.rel = "stylesheet";
         link.href = "style.css";
         document.head.appendChild(link);
-        
-        
 
     } catch (error) {
         console.error("Ticker loading error:", error);
     }
-   
+
+    
 }
 
 document.addEventListener("DOMContentLoaded", loadPage);
