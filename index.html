@@ -27,6 +27,54 @@
 
 </head>
 <body>
+ <div id="loading-overlay">
+    <div class="spinner"></div>
+</div>
+
+<style>
+#loading-overlay{
+    position:fixed;
+    inset:0;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    background:#fff;
+    z-index:9999;
+    opacity:1;
+    transition:opacity .5s ease;
+}
+
+#loading-overlay.hide{
+    opacity:0;
+    pointer-events:none;
+}
+
+.spinner{
+    width:50px;
+    height:50px;
+    border:5px solid #ddd;
+    border-top-color:#2563eb;
+    border-radius:50%;
+    animation:spin .8s linear infinite;
+}
+
+@keyframes spin{
+    to{transform:rotate(360deg);}
+}
+</style>
+
+<script>
+window.addEventListener("load", () => {
+    const loader = document.getElementById("loading-overlay");
+
+    loader.classList.add("hide");
+
+    setTimeout(() => {
+        loader.remove();
+    }, 500); // match CSS transition duration
+});
+</script>
+    
 <!-- ===== PRODUCT TICKER =====
      HOW TO ADD A NEW PRODUCT: copy one <li>...</li> line below, paste it at the end of the list,
      then change the Gumroad link (href), the image file name (src) and the product name (alt).
