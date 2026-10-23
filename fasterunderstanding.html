@@ -243,14 +243,12 @@ async function loadPage() {
     } catch (error) {
         console.error("Ticker loading error:", error);
     }
-
-    setTimeout(function () {
-        const link = document.createElement("link");
+      const link = document.createElement("link");
         link.rel = "stylesheet";
         link.href = "style.css";
-
         document.head.appendChild(link);
-    }, 10);
+
+   
 }
 
 document.addEventListener("DOMContentLoaded", loadPage);
