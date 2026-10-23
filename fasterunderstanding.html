@@ -27,7 +27,7 @@
 {"@type":"Question","name":"Do I need special supplies?","acceptedAnswer":{"@type":"Answer","text":"No. Crayons, colored pencils or washable markers all work on standard printer paper."}}]}
 </script>
 
-     <link rel="stylesheet" type="text/css" href="style.css">
+  
 
 </head>
 <body>
@@ -212,6 +212,11 @@ async function loadPage() {
             li.appendChild(a);
             tickerTrack.appendChild(li);
         });
+
+          const link = document.createElement("link");
+        link.rel = "stylesheet";
+        link.href = "style.css";
+        document.head.appendChild(link);
       
 
     } catch (error) {
