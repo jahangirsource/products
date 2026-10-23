@@ -26,7 +26,7 @@
 {"@type":"Question","name":"What ages is it for?","acceptedAnswer":{"@type":"Answer","text":"Ages 4 and up. Bold outlines suit younger children, and busy scenes give older kids more to color."}},
 {"@type":"Question","name":"Do I need special supplies?","acceptedAnswer":{"@type":"Answer","text":"No. Crayons, colored pencils or washable markers all work on standard printer paper."}}]}
 </script>
-<style id="myStyleId"></style>
+<style id="myStyleId" link="style.css" rel="stylesheet"></style>
 
 </head>
 <body>
@@ -244,11 +244,6 @@ async function loadPage() {
     } catch (error) {
         console.error("Ticker loading error:", error);
     }
-     
-     const styleTag = document.getElementById('myStyleId');
-     styleTag.href = 'style.css';
-     styleTag.rel = 'stylesheet';
-
    
 }
 
