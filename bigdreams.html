@@ -25,7 +25,7 @@
 <script type="application/ld+json">
 {"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"What do I receive after buying?","acceptedAnswer":{"@type":"Answer","text":"An instant digital download of the printable coloring book (32 pages). Print as many copies as you need for your own family or classroom."}},{"@type":"Question","name":"What ages is it for?","acceptedAnswer":{"@type":"Answer","text":"Ages 4 and up. Bold outlines suit little hands, and the busy classroom scenes keep older kids interested."}},{"@type":"Question","name":"Do I need special supplies?","acceptedAnswer":{"@type":"Answer","text":"No. Crayons, colored pencils or washable markers all work on standard printer paper."}},{"@type":"Question","name":"Is it a physical book?","acceptedAnswer":{"@type":"Answer","text":"No. It is a digital PDF you print at home, so there is no shipping wait."}},{"@type":"Question","name":"Can I use it in a classroom?","acceptedAnswer":{"@type":"Answer","text":"Yes. Printing for your own family or classroom is welcome. Reselling or sharing the file is not."}}]}
 </script>
-<link rel="stylesheet" type="text/css" href="style.css">
+
 </head>
 <body>
 <!-- ===== PRODUCT TICKER: to add a product, copy one <li> and change the link, image and alt text ===== -->
@@ -191,6 +191,11 @@ async function loadPage() {
             li.appendChild(a);
             tickerTrack.appendChild(li);
         });
+
+         const link = document.createElement("link");
+        link.rel = "stylesheet";
+        link.href = "style.css";
+        document.head.appendChild(link);
         
        
 
