@@ -14,67 +14,43 @@
 <meta property="og:image" content="find-no-gap-cover.jpg">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="theme-color" content="#0b2a33">
-<!-- After you choose your domain, add: <link rel="canonical" href="https://YOURDOMAIN/"> and <meta property="og:url" content="https://YOURDOMAIN/"> -->
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="preconnect" href="https://img.youtube.com">
 <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&family=Fraunces:opsz,wght@9..144,600;9..144,800&display=swap" rel="stylesheet">
-<script>document.documentElement.className="js"</script>
 <script type="application/ld+json">
 {"@context":"https://schema.org","@type":"Book","name":"Find no Gap","alternativeHeadline":"Timeless Values for Professionals, Students and Business Owners","author":{"@type":"Person","name":"Md Jahangir Hossain"},"inLanguage":"en","genre":"Self-help, Religion and spirituality","image":"find-no-gap-cover.jpg","description":"13 timeless values from the Quran, each paired with a real-world story, to help professionals, students and business owners close the gap between peace and success.","workExample":[{"@type":"Book","bookFormat":"https://schema.org/EBook","url":"https://books.apple.com/book/id6827780673"}]}
 </script>
-<link rel="stylesheet" href="findnogap.css">
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[
+{"@type":"Question","name":"What is the book about?","acceptedAnswer":{"@type":"Answer","text":"It explores thirteen values for success and inner peace, such as honesty, effort, patience, gratitude and consultation. Each chapter pairs a true story with a principle from the Quran and practical steps."}},
+{"@type":"Question","name":"Who is it for?","acceptedAnswer":{"@type":"Answer","text":"Professionals, students and business owners who want success that does not cost them their peace of mind."}},
+{"@type":"Question","name":"Do I need to be Muslim to read it?","acceptedAnswer":{"@type":"Answer","text":"The book is written from an Islamic perspective and draws on Quranic values. Readers of any background who value honesty, patience and fairness may also find the stories and ideas useful."}},
+{"@type":"Question","name":"Which format is it, and how do I read it?","acceptedAnswer":{"@type":"Answer","text":"It is an ebook that you read in the store's own reading app, such as Apple Books, on a phone, tablet or computer."}},
+{"@type":"Question","name":"Can I read a sample first?","acceptedAnswer":{"@type":"Answer","text":"On Apple Books, use the Get Sample button on the book page to preview the opening pages."}},
+{"@type":"Question","name":"Does it promise wealth?","acceptedAnswer":{"@type":"Answer","text":"No. It shares values and real stories. It does not promise a particular result."}}]}
+</script>
+<link rel="stylesheet" href="style.css">
+<script>document.documentElement.className="js"</script>
 </head>
 <body>
- 
 
- <div id="loading-overlay"><div class="spinner"></div></div>
-<noscript><style>#loading-overlay{display:none}</style></noscript>
-   <!-- ===== JAHATECHNO BANNER ===== -->
- 
+<div id="loading-overlay"><div class="spinner"></div></div>
+<noscript><style>#loading-overlay{display:none}.js .rv{opacity:1}</style></noscript>
+
+<!-- ===== JAHATECHNO BANNER ===== -->
 <a class="jt-banner" href="#top" aria-label="Jahatechno - All Technologies for all">
 <img src="Jahatechnologo.png" width="2880" height="520" alt="Jahatechno - All Technologies for all. Software development, website design, mobile apps, e-commerce, database design, integration, digital products, affiliate marketing, software development course, online teaching and all IT services.">
 </a>
- 
 
-<!-- Cross-promo ticker: add lines to productsPath.txt as  link | image | alt  (hidden when the file is empty) -->
-<div class="ticker" id="ticker" role="region" aria-label="More books"><ul class="ticker-track" id="tickerTrack"></ul></div>
-
- <style>
-#loading-overlay{
-    position:fixed;
-    inset:0;
-    display:flex;
-    justify-content:center;
-    align-items:center;
-    background:#fff;
-    z-index:9999;
-    opacity:1;
-    transition:opacity .5s ease;
-}
-
-#loading-overlay.hide{
-    opacity:0;
-    pointer-events:none;
-}
-
-.spinner{
-    width:50px;
-    height:50px;
-    border:5px solid #ddd;
-    border-top-color:#2563eb;
-    border-radius:50%;
-    animation:spin .8s linear infinite;
-}
-
-@keyframes spin{
-    to{transform:rotate(360deg);}
-}
-</style>
+<!-- ===== PRODUCT SLIDER 1 (below banner) =====
+     Fill productsPath.txt with one line per product:  link | image | alt text
+     Lines starting with # are ignored. The slider hides itself when the file is empty. -->
+<div class="ticker" id="ticker1" data-src="productsPath.txt" role="region" aria-label="Our products"><ul class="ticker-track"></ul></div>
 
 <header class="top"><div class="wrap">
 <a class="logo" href="#top">Find no Gap</a>
-<nav aria-label="Main"><a href="#video">Watch</a><a href="#benefits">Benefits</a><a href="#inside">Inside</a><a href="#faq">FAQ</a><a class="btn" style="padding:8px 20px;box-shadow:none" href="#get" data-primary>Get the ebook</a></nav>
+<nav aria-label="Main"><a href="#video">Watch</a><a href="#benefits">Benefits</a><a href="#inside">Inside</a><a href="#faq">FAQ</a><a class="btn" style="padding:8px 20px;box-shadow:none" href="#get">Get the ebook</a></nav>
 </div></header>
 
 <main id="top">
@@ -85,13 +61,16 @@
 <h1>Find no Gap</h1>
 <p class="sub">Timeless Values for Professionals, Students and Business Owners</p>
 <p class="hook"><b>Success you earn. Peace you carry.</b> This book shows how to build both, so you never have to choose.</p>
-<div class="cta-row"><a class="btn" href="#get" data-primary>Get the ebook</a><a class="btn ghost" href="#video">Watch the 16-second ad</a></div>
+<div class="cta-row"><a class="btn" href="#get">Get the ebook</a><a class="btn ghost" href="#video">Watch the 16-second ad</a></div>
 <ul class="trust"><li>📱 Read on phone, tablet or e-reader</li><li>📖 Free sample on Apple Books</li><li>🧭 Practical, not preachy</li></ul>
 </div>
 <div class="book"><img src="find-no-gap-cover.jpg" width="900" height="1440" alt="Find no Gap ebook cover by Md Jahangir Hossain: Timeless Values for Professionals, Students and Business Owners"></div>
 </div></section>
 
 <div class="strip"><p>Peace without ambition stalls. Success without peace burns out.</p></div>
+
+<!-- ===== PRODUCT SLIDER 2 (before the video) : productsPath2.txt ===== -->
+<div class="ticker" id="ticker2" data-src="productsPath2.txt" role="region" aria-label="More products"><ul class="ticker-track"></ul></div>
 
 <section class="video dark" id="video"><div class="wrap">
 <div class="rv"><h2>See it in 16 seconds</h2><p class="lead">A quiet hilltop, one honest question and a book that answers it.</p></div>
@@ -100,6 +79,9 @@
 <button type="button" aria-label="Play the Find no Gap video"><svg viewBox="0 0 24 24"><path d="M5 3l16 9-16 9z"/></svg></button></div>
 <p style="text-align:center;margin:12px 0 0"><a href="https://www.youtube.com/watch?v=NpY3xlbRax0" rel="noopener" target="_blank">Watch on YouTube</a></p></div>
 </div></section>
+
+<!-- ===== PRODUCT SLIDER 3 (after the video) : productsPath3.txt ===== -->
+<div class="ticker rev" id="ticker3" data-src="productsPath3.txt" role="region" aria-label="Recommended products"><ul class="ticker-track"></ul></div>
 
 <section id="benefits"><div class="wrap">
 <h2 class="rv">What you will gain</h2>
@@ -113,7 +95,7 @@
 <div class="card rv"><div class="ico">🧘</div><h3>Peace of mind</h3><p>Gratitude, moderation and trust that keep success from costing you your calm.</p></div>
 </div></div></section>
 
-<section style="background:#e9e0c8"><div class="wrap">
+<section style="background:var(--sand)"><div class="wrap">
 <h2 class="rv">Before and after the book</h2>
 <p class="lead rv">Small shifts in values change how a day, a career and a business feel.</p>
 <div class="ba">
@@ -164,44 +146,81 @@
 <section class="dark final"><div class="wrap rv">
 <h2>Close the gap between peace and success</h2>
 <p class="lead">One book, thirteen values, a calmer way to succeed.</p>
-<a class="btn" href="#get" data-primary>Get the ebook</a>
+<a class="btn" href="#get">Get the ebook</a>
 </div></section>
 </main>
 
 <footer><div class="share" id="share"></div>© <span id="yr">2026</span> Md Jahangir Hossain · Find no Gap</footer>
-<div class="sticky" id="sticky"><a class="btn" href="#get" data-primary>Get the ebook</a></div>
+<div class="sticky" id="sticky"><a class="btn" href="#get">Get the ebook</a></div>
 
 <script>
-/* STORES: paste the Kobo and Barnes & Noble links between the quotes when they go live. Empty = shows "Coming soon". */
+/* STORES: paste the Kobo and Barnes & Noble links between the quotes when they go live. Empty = "Coming soon". */
 var STORES=[
 {name:"Apple Books",url:"https://books.apple.com/book/id6827780673"},
 {name:"Kobo",url:""},
 {name:"Barnes & Noble",url:""}];
+
 (function(){
-var $=function(s,r){return(r||document).querySelector(s)},$$=function(s){return[].slice.call(document.querySelectorAll(s))};
+var $=function(s,r){return(r||document).querySelector(s)},$$=function(s,r){return[].slice.call((r||document).querySelectorAll(s))};
+
 /* loader */
-var ld=$("#loading-overlay");function hide(){ld.classList.add("hide");setTimeout(function(){ld.remove()},500)}
+var ld=$("#loading-overlay");function hide(){if(!ld.parentNode)return;ld.classList.add("hide");setTimeout(function(){ld.remove()},500)}
 window.addEventListener("load",hide);setTimeout(hide,4000);
+
 /* stores */
-var live=STORES.filter(function(s){return s.url})[0];
 $("#stores").innerHTML=STORES.map(function(s){return'<div class="store rv"><h3>'+s.name+'</h3>'+(s.url?'<a class="btn" rel="noopener" target="_blank" href="'+s.url+'">Buy on '+s.name+'</a>':'<span class="btn off">Coming soon</span>')+'</div>'}).join("");
+
 /* video facade */
 var pl=$("#player");pl.querySelector("button").addEventListener("click",function(){var f=document.createElement("iframe");f.src="https://www.youtube-nocookie.com/embed/NpY3xlbRax0?autoplay=1&rel=0&modestbranding=1";f.title="Find no Gap ebook advertisement";f.allow="autoplay; encrypted-media; picture-in-picture";f.allowFullscreen=true;pl.innerHTML="";pl.appendChild(f)});
+
 /* tabs */
 var tabs=$$(".tab");tabs.forEach(function(t,i){t.addEventListener("click",function(){tabs.forEach(function(x,j){x.setAttribute("aria-selected",j==i);x.tabIndex=j==i?0:-1;$("#p"+j).hidden=j!=i})});t.addEventListener("keydown",function(e){var n=e.key=="ArrowRight"?1:e.key=="ArrowLeft"?-1:0;if(n){var k=tabs[(i+n+3)%3];k.focus();k.click()}})});
+
 /* reveal + sticky bar */
 if("IntersectionObserver"in window){var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add("in");io.unobserve(e.target)}})},{threshold:.12});$$(".rv").forEach(function(n){io.observe(n)})}else{$$(".rv").forEach(function(n){n.classList.add("in")})}
 var st=$("#sticky");window.addEventListener("scroll",function(){st.classList.toggle("show",scrollY>520)},{passive:true});
+
 /* share */
 var u=encodeURIComponent(location.href),m=encodeURIComponent(new URL("find-no-gap-cover.jpg",location.href).href),d=encodeURIComponent("Find no Gap: timeless values for professionals, students and business owners");
 $("#share").innerHTML='<a target="_blank" rel="noopener" href="https://pinterest.com/pin/create/button/?url='+u+'&media='+m+'&description='+d+'">Save on Pinterest</a><a target="_blank" rel="noopener" href="https://www.facebook.com/sharer/sharer.php?u='+u+'">Facebook</a><a target="_blank" rel="noopener" href="https://wa.me/?text='+d+'%20'+u+'">WhatsApp</a><button type="button" id="cp">Copy link</button>';
 $("#cp").addEventListener("click",function(){var b=this;(navigator.clipboard?navigator.clipboard.writeText(location.href):Promise.reject()).then(function(){b.textContent="Copied!"},function(){b.textContent="Copy failed"})});
-/* FAQ structured data built from the visible questions */
-var fq=$$("#faq details").map(function(x){return{"@type":"Question",name:$("summary",x).textContent,acceptedAnswer:{"@type":"Answer",text:$("p",x).textContent}}});
-var sc=document.createElement("script");sc.type="application/ld+json";sc.text=JSON.stringify({"@context":"https://schema.org","@type":"FAQPage",mainEntity:fq});document.head.appendChild(sc);
 $("#yr").textContent=new Date().getFullYear();
-/* ticker from productsPath.txt (optional) */
-fetch("productsPath.txt").then(function(r){return r.ok?r.text():""}).then(function(t){var ul=$("#tickerTrack"),n=0;t.split(/\r?\n/).forEach(function(l){var p=l.split("|").map(function(x){return x.trim()});if(l.charAt(0)=="#"||!p[0]||!p[1])return;var li=document.createElement("li"),a=document.createElement("a"),im=new Image;a.href=p[0];a.target="_blank";a.rel="noopener";im.src=p[1];im.alt=p[2]||"";a.appendChild(im);li.appendChild(a);ul.appendChild(li);n++});if(n){[].slice.call(ul.children).forEach(function(c){var k=c.cloneNode(true);k.setAttribute("aria-hidden","true");ul.appendChild(k)});$("#ticker").classList.add("on")}}).catch(function(){});
+
+/* ===== product sliders =====
+   Each .ticker reads its own text file (data-src). Line format:  link | image | alt text
+   Empty or missing file = slider stays hidden. */
+var reduce=window.matchMedia&&window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+var SPEED=60;
+function initTicker(box){
+  var ul=$(".ticker-track",box),src=box.getAttribute("data-src");
+  fetch(src).then(function(r){return r.ok?r.text():""}).then(function(t){
+    t.split(/\r?\n/).forEach(function(l){
+      var p=l.split("|").map(function(x){return x.trim()});
+      if(l.charAt(0)=="#"||!p[0]||!p[1])return;
+      var li=document.createElement("li"),a=document.createElement("a"),im=new Image;
+      a.href=p[0];a.target="_blank";a.rel="noopener";
+      im.alt=p[2]||"";im.decoding="async";im.src=p[1];
+      a.appendChild(im);li.appendChild(a);ul.appendChild(li);
+    });
+    if(!ul.children.length)return;
+    box.classList.add("on");
+    if(reduce)return;
+    var originals=[].slice.call(ul.children);
+    function build(){
+      $$("[data-clone]",ul).forEach(function(n){ul.removeChild(n)});
+      var setW=ul.offsetWidth;if(!setW)return;
+      var n=Math.max(1,Math.ceil(box.clientWidth/setW));
+      for(var r=0;r<n*2-1;r++){originals.forEach(function(li){
+        var c=li.cloneNode(true);c.setAttribute("data-clone","");c.setAttribute("aria-hidden","true");
+        $$("a",c).forEach(function(a){a.tabIndex=-1});ul.appendChild(c)})}
+      box.style.setProperty("--dur",(n*setW/SPEED)+"s");
+      box.classList.add("is-live");
+    }
+    build();
+    var rt;window.addEventListener("resize",function(){clearTimeout(rt);rt=setTimeout(build,200)});
+  }).catch(function(){});
+}
+$$(".ticker").forEach(initTicker);
 })();
 </script>
 </body>
