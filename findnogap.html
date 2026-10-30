@@ -40,6 +40,38 @@
 <!-- Cross-promo ticker: add lines to productsPath.txt as  link | image | alt  (hidden when the file is empty) -->
 <div class="ticker" id="ticker" role="region" aria-label="More books"><ul class="ticker-track" id="tickerTrack"></ul></div>
 
+ <style>
+#loading-overlay{
+    position:fixed;
+    inset:0;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    background:#fff;
+    z-index:9999;
+    opacity:1;
+    transition:opacity .5s ease;
+}
+
+#loading-overlay.hide{
+    opacity:0;
+    pointer-events:none;
+}
+
+.spinner{
+    width:50px;
+    height:50px;
+    border:5px solid #ddd;
+    border-top-color:#2563eb;
+    border-radius:50%;
+    animation:spin .8s linear infinite;
+}
+
+@keyframes spin{
+    to{transform:rotate(360deg);}
+}
+</style>
+
 <header class="top"><div class="wrap">
 <a class="logo" href="#top">Find no Gap</a>
 <nav aria-label="Main"><a href="#video">Watch</a><a href="#benefits">Benefits</a><a href="#inside">Inside</a><a href="#faq">FAQ</a><a class="btn" style="padding:8px 20px;box-shadow:none" href="#get" data-primary>Get the ebook</a></nav>
