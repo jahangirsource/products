@@ -51,7 +51,7 @@ section{padding:72px 0}
 @keyframes spin{to{transform:rotate(360deg)}}
 /* banner + tickers */
 .jt-banner{display:block;background:#fff;border-bottom:1px solid var(--line)}
-.jt-banner img{width:100%;max-width:1120px;margin:0 auto;height:250px}
+.jt-banner img{width:100%;max-width:1120px;margin:0 auto;height:250px;object-fit:contain}
 .ticker{overflow:hidden;background:var(--paper);border-block:1px solid var(--line);padding:10px 0}
 .ticker:not(.is-live){display:none}
 .ticker-track{display:flex;gap:16px;list-style:none;margin:0;padding:0;width:max-content;animation:tick var(--dur,40s) linear infinite}
@@ -144,8 +144,6 @@ footer{padding-bottom:90px}
 .stamp{left:8px}
 }
 @media (prefers-reduced-motion:reduce){.ticker-track{animation:none}html{scroll-behavior:auto}}
-
-
 </style>
 </head>
 <body>
@@ -305,19 +303,9 @@ if(reduce)return;
 var set=[].slice.call(ul.children),w=ul.offsetWidth||1,copies=Math.max(1,Math.ceil(box.clientWidth/w));
 for(var i=0;i<copies*2-1;i++){set.forEach(function(li){var c=li.cloneNode(true);c.setAttribute("aria-hidden","true");[].forEach.call(c.querySelectorAll("a"),function(a){a.tabIndex=-1});ul.appendChild(c)})}
 /* track holds an even number of sets; the animation shifts by exactly half, so the loop is seamless */
-box.style.setProperty("--dur",(copies*w/60)+"s");
+box.style.setProperty("--dur",(copies*w/20)+"s");
 }).catch(function(){})})
 })();
 </script>
-
-  <style>
-    .jt-banner img {
-    display: block;
-    width: 100%;
-    height: 250px;
-    max-width: 1600px;
-    margin: 0 auto;
-}
-  </style>
 </body>
 </html>
