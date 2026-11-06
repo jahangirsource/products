@@ -51,7 +51,7 @@ section{padding:72px 0}
 @keyframes spin{to{transform:rotate(360deg)}}
 /* banner + tickers */
 .jt-banner{display:block;background:#fff;border-bottom:1px solid var(--line)}
-.jt-banner img{width:100%;max-width:1120px;margin:0 auto;height:auto}
+.jt-banner img{width:100%;max-width:1120px;margin:0 auto;height:250px}
 .ticker{overflow:hidden;background:var(--paper);border-block:1px solid var(--line);padding:10px 0}
 .ticker:not(.is-live){display:none}
 .ticker-track{display:flex;gap:16px;list-style:none;margin:0;padding:0;width:max-content;animation:tick var(--dur,40s) linear infinite}
@@ -145,13 +145,7 @@ footer{padding-bottom:90px}
 }
 @media (prefers-reduced-motion:reduce){.ticker-track{animation:none}html{scroll-behavior:auto}}
 
-  .jt-banner img {
-    display: block;
-    width: 100%;
-    height: 250px;
-    max-width: 1600px;
-    margin: 0 auto;
-}
+
 </style>
 </head>
 <body>
