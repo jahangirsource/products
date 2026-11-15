@@ -3,3 +3,4 @@ https://jahangirsource.github.io/products/index|helpingHandThumnail.png|Helping 
 https://jahangirsource.github.io/products/bigdreams|thumnailcuteanimalschool.png|Cute animal school coloring book
 https://jahangirsource.github.io/products/findnogap|find-no-gap-cover.jpg|Find no Gap
 https://jahangirsource.github.io/products/teacherstime|AI-Teacher.jpg|AI Prompt Pack for Teachers
+https://jahangirsource.github.io/products/vidconverter|jt-offline-video-studio.jpg|JT-Offline-Video-Studio
